@@ -43,5 +43,25 @@ def access_elements
 
 end
 
+def obtain_information
+
+    puts "----- Obtain Information ---------------"
+    array = [ 0, 1, 2, 3, 4, 5, 6 ]
+    r = []
+
+    r << array.length       # => 7
+    r << array.count        # => 7
+    r << array.size         # => 7
+
+    r << array.empty?       # => false
+
+    r << array.include?(3)  # => true
+    r << array.include?(7)  # => false
+
+    r.each { |e| puts "#{e}" }
+    
+end
+
 create_arrays
 access_elements
+obtain_information
