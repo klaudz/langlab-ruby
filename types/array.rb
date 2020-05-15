@@ -19,4 +19,29 @@ def create_array
 
 end
 
+def access_array
+
+    puts "----- Access Array ---------------"
+    array = [ 0, 1, 2, 3, 4, 5, 6 ]
+    r = []
+    
+    r << array[1]       # => 1
+    r << array[9]       # => nil
+    r << array[-1]      # => 6
+    r << array[-9]      # => nil
+
+    # [start, length]
+    r << array[2, 4]    # => [2, 3, 4, 5]
+
+    # [start..end]
+    r << array[2..4]    # => [2, 3, 4]
+    r << array[2..-1]   # => [2, 3, 4, 5, 6]
+    r << array[2..-6]   # => []
+    r << array[-4..-2]  # => [3, 4, 5]
+
+    r.each { |e| puts e ? "#{e}" : "nil" }
+
+end
+
 create_array
+access_array
