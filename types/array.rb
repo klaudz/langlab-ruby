@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-def create_array
+def create_arrays
 
     puts "----- Create Array ---------------"
     r = []
@@ -19,9 +19,9 @@ def create_array
 
 end
 
-def access_array
+def access_elements
 
-    puts "----- Access Array ---------------"
+    puts "----- Access Elements ---------------"
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
     r = []
     
@@ -43,5 +43,5 @@ def access_array
 
 end
 
-create_array
-access_array
+create_arrays
+access_elements
