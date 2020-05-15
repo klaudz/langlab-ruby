@@ -2,6 +2,7 @@
 
 def create_array
 
+    puts "----- Create Array ---------------"
     r = []
 
     r << [ false, 1, "2", 3.0 ]         # => [false, 1, "2", 3.0]
