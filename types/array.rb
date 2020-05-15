@@ -22,8 +22,9 @@ end
 def access_elements
 
     puts "----- Access Elements ---------------"
-    array = [ 0, 1, 2, 3, 4, 5, 6 ]
     r = []
+
+    array = [ 0, 1, 2, 3, 4, 5, 6 ]
     
     r << array[1]       # => 1
     r << array[9]       # => nil
@@ -46,8 +47,9 @@ end
 def obtain_information
 
     puts "----- Obtain Information ---------------"
-    array = [ 0, 1, 2, 3, 4, 5, 6 ]
     r = []
+
+    array = [ 0, 1, 2, 3, 4, 5, 6 ]
 
     r << array.length       # => 7
     r << array.count        # => 7
