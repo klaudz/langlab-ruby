@@ -62,6 +62,40 @@ def obtain_information
     
 end
 
+def iterate_arrays
+
+    puts "----- Iterate Arrays ---------------"
+    r = []
+
+    # `each` and `reverse_each`
+    array_0 = [ 0, 1, 2, 3 ]
+    array_1 = []
+    array_2 = []
+    array_0.each         { |i| array_1 << i ** 2 }
+    array_0.reverse_each { |i| array_2 << i ** 2 }
+    r << array_0    # => [0, 1, 2, 3]
+    r << array_1    # => [0, 1, 4, 9]
+    r << array_2    # => [9, 4, 1, 0]
+
+    # <<< `map` and `map!`
+
+    old_array = [ "a", "b", "c", "d" ]
+    new_array = old_array.map { |item| "_" + item }
+    r << old_array  # => ["a", "b", "c", "d"]
+    r << new_array  # => ["_a", "_b", "_c", "_d"]
+
+    old_array = [ "a", "b", "c", "d" ]
+    new_array = old_array.map! { |item| "_" + item }
+    r << old_array  # => ["_a", "_b", "_c", "_d"]
+    r << new_array  # => ["_a", "_b", "_c", "_d"]
+
+    # >>>
+
+    r.each { |e| puts "#{e}" }
+
+end
+
 create_arrays
 access_elements
 obtain_information
+iterate_arrays
