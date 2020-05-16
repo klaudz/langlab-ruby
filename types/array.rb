@@ -101,6 +101,26 @@ def iterate_arrays
 
 end
 
+def select_items
+
+    puts "----- Select Items ---------------", ""
+
+    # <<< `select` and `select!`
+
+    array = [ 0, 1, 2, 3, 4 ]
+    $p << array.select { |i| i % 2 == 0 }
+    $p << array
+    $p.new_line
+
+    array = [ 0, 1, 2, 3, 4 ]
+    $p << array.select! { |i| i % 2 == 0 }
+    $p << array
+    $p.new_line
+
+    # >>>
+
+end
+
 def add_remove_items
 
     puts "----- Add and Remove Items ---------------", ""
@@ -140,4 +160,5 @@ create_arrays
 access_elements
 obtain_information
 iterate_arrays
+select_items
 add_remove_items
