@@ -24,9 +24,9 @@ def create_arrays
 
 end
 
-def access_elements
+def get_set_items
 
-    puts "----- Access Elements ---------------", ""
+    puts "----- Get Items ---------------", ""
 
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
     
@@ -45,6 +45,14 @@ def access_elements
     $p << array[2..-1]  #=> [2, 3, 4, 5, 6]
     $p << array[2..-6]  #=> []
     $p << array[-4..-2] #=> [3, 4, 5]
+    $p.new_line
+
+    puts "----- Set Items ---------------", ""
+
+    array = [ 0, 1, 2, 3, 4 ]
+    array[1] = "1"
+    array[7] = "7"
+    $p << array         #=> [0, "1", 2, 3, 4, nil, nil, "7"]
     $p.new_line
 
 end
@@ -156,7 +164,7 @@ def add_remove_items
 end
 
 create_arrays
-access_elements
+get_set_items
 obtain_information
 iterate_arrays
 select_items
