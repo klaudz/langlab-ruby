@@ -89,7 +89,40 @@ def iterate_arrays
 
 end
 
+def add_remove_items
+
+    puts "----- Add and Remove Items ---------------"
+
+    # `push` and `pop`
+    array = [ "0", "1", "2", "3" ]
+    $p << array.push("4")       # => ["0", "1", "2", "3", "4"]
+    $p << array.push("5", "6")  # => ["0", "1", "2", "3", "4", "5", "6"]
+    $p << ( array << "7" )      # => ["0", "1", "2", "3", "4", "5", "6", "7"]
+    $p << array.pop             # => "7"  (removed)
+    $p << array.pop(1)          # => ["6"]  (removed)
+    $p << array.pop(2)          # => ["4", "5"] (removed)
+    $p << array                 # => ["0", "1", "2", "3"]
+
+    # `unshift` and `shift`
+    array = [ "0", "1", "2", "3" ]
+    $p << array.unshift("-1")   # => ["-1", "0", "1", "2", "3"]
+    $p << array.shift           # => "-1"  (removed)
+    $p << array                 # => ["0", "1", "2", "3"]
+
+    # `insert`, `delete_at` and `delete`
+    array = [ "0", "1", "1", "2" ]
+    $p << array.insert(3, "1.1")                # => ["0", "1", "1", "1.1", "2"]
+    $p << array.insert(1, "0.1", "0.2", "0.3")  # => ["0", "0.1", "0.2", "0.3", "1", "1", "1.1", "2"]
+    $p << array.delete_at(1)                    # => "0.1"  (removed)
+    $p << array                                 # => ["0", "0.2", "0.3", "1", "1", "1.1", "2"]
+    $p << array.delete("-1")                    # => nil  (not found)
+    $p << array.delete("1")                     # => "1"  (removed)
+    $p << array                                 # => ["0", "0.2", "0.3", "1.1", "2"]
+
+end
+
 create_arrays
 access_elements
 obtain_information
 iterate_arrays
+add_remove_items
