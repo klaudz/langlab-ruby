@@ -39,4 +39,21 @@ def create_hashes
 
 end
 
+def obtain_information
+
+    puts "----- Obtain Information ---------------", ""
+
+    hash = { "k0": "v0", "k1": "v1" }
+
+    $p << hash.length      #=> 2
+    $p << hash.count       #=> 2
+    $p << hash.size        #=> 2
+    $p.new_line
+
+    $p << hash.empty?      #=> false
+    $p.new_line
+    
+end
+
 create_hashes
+obtain_information
