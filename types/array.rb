@@ -73,28 +73,26 @@ def iterate_arrays
     puts "----- Iterate Arrays ---------------", ""
 
     # `each` and `reverse_each`
-    array_0 = [ 0, 1, 2, 3 ]
-    array_1 = []
-    array_2 = []
-    array_0.each         { |i| array_1 << i ** 2 }
-    array_0.reverse_each { |i| array_2 << i ** 2 }
-    $p << array_0    # => [0, 1, 2, 3]
-    $p << array_1    # => [0, 1, 4, 9]
-    $p << array_2    # => [9, 4, 1, 0]
+    array = [ 0, 1, 2, 3 ]
+    array_e = []
+    array_r = []
+    array.each         { |i| array_e << i ** 2 }
+    array.reverse_each { |i| array_r << i ** 2 }
+    $p << array         # => [0, 1, 2, 3]
+    $p << array_e       # => [0, 1, 4, 9]
+    $p << array_r       # => [9, 4, 1, 0]
     $p.new_line
 
     # <<< `map` and `map!`
 
-    old_array = [ "a", "b", "c", "d" ]
-    new_array = old_array.map { |item| "_" + item }
-    $p << old_array  # => ["a", "b", "c", "d"]
-    $p << new_array  # => ["_a", "_b", "_c", "_d"]
+    array = [ "a", "b", "c", "d" ]
+    $p << array.map { |item| "_" + item }   # => ["_a", "_b", "_c", "_d"]
+    $p << array                             # => ["a", "b", "c", "d"]
     $p.new_line
 
-    old_array = [ "a", "b", "c", "d" ]
-    new_array = old_array.map! { |item| "_" + item }
-    $p << old_array  # => ["_a", "_b", "_c", "_d"]
-    $p << new_array  # => ["_a", "_b", "_c", "_d"]
+    array = [ "a", "b", "c", "d" ]
+    $p << array.map! { |item| "_" + item }  # => ["_a", "_b", "_c", "_d"]
+    $p << array                             # => ["_a", "_b", "_c", "_d"]
     $p.new_line
 
     # >>>
