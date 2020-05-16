@@ -6,7 +6,7 @@ $p = Langlab::Printer.new
 
 def create_arrays
 
-    puts "----- Create Array ---------------", ""
+    puts "----- Create Arrays ---------------", ""
 
     $p << [ false, 1, "2", 3.0 ]        #=> [false, 1, "2", 3.0]
     $p << [ "a", "b", "c", "d" ]        #=> ["a", "b", "c", "d"]
