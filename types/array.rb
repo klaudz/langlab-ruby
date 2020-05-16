@@ -3,6 +3,7 @@
 require_relative '_utils/printer'
 
 $p = Langlab::Printer.new
+$p.new_line
 
 def create_arrays
 
