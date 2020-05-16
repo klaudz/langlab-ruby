@@ -6,23 +6,26 @@ $p = Langlab::Printer.new
 
 def create_arrays
 
-    puts "----- Create Array ---------------"
+    puts "----- Create Array ---------------", ""
 
     $p << [ false, 1, "2", 3.0 ]         # => [false, 1, "2", 3.0]
     $p << [ "a", "b", "c", "d" ]         # => ["a", "b", "c", "d"]
+    $p.new_line
 
     $p << Array.new                      # => []
     $p << Array.new(4)                   # => [nil, nil, nil, nil]
     $p << Array.new(4, "str")            # => ["str", "str", "str", "str"]
+    $p.new_line
 
     $p << Array.new(4) { "str" }         # => ["str", "str", "str", "str"]
     $p << Array.new(4) { |i| i.to_s }    # => ["0", "1", "2", "3"]
+    $p.new_line
 
 end
 
 def access_elements
 
-    puts "----- Access Elements ---------------"
+    puts "----- Access Elements ---------------", ""
 
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
     
@@ -30,38 +33,44 @@ def access_elements
     $p << array[9]       # => nil
     $p << array[-1]      # => 6
     $p << array[-9]      # => nil
+    $p.new_line
 
     # [start, length]
     $p << array[2, 4]    # => [2, 3, 4, 5]
+    $p.new_line
 
     # [start..end]
     $p << array[2..4]    # => [2, 3, 4]
     $p << array[2..-1]   # => [2, 3, 4, 5, 6]
     $p << array[2..-6]   # => []
     $p << array[-4..-2]  # => [3, 4, 5]
+    $p.new_line
 
 end
 
 def obtain_information
 
-    puts "----- Obtain Information ---------------"
+    puts "----- Obtain Information ---------------", ""
 
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
 
     $p << array.length       # => 7
     $p << array.count        # => 7
     $p << array.size         # => 7
+    $p.new_line
 
     $p << array.empty?       # => false
+    $p.new_line
 
     $p << array.include?(3)  # => true
     $p << array.include?(7)  # => false
+    $p.new_line
     
 end
 
 def iterate_arrays
 
-    puts "----- Iterate Arrays ---------------"
+    puts "----- Iterate Arrays ---------------", ""
 
     # `each` and `reverse_each`
     array_0 = [ 0, 1, 2, 3 ]
@@ -72,6 +81,7 @@ def iterate_arrays
     $p << array_0    # => [0, 1, 2, 3]
     $p << array_1    # => [0, 1, 4, 9]
     $p << array_2    # => [9, 4, 1, 0]
+    $p.new_line
 
     # <<< `map` and `map!`
 
@@ -79,11 +89,13 @@ def iterate_arrays
     new_array = old_array.map { |item| "_" + item }
     $p << old_array  # => ["a", "b", "c", "d"]
     $p << new_array  # => ["_a", "_b", "_c", "_d"]
+    $p.new_line
 
     old_array = [ "a", "b", "c", "d" ]
     new_array = old_array.map! { |item| "_" + item }
     $p << old_array  # => ["_a", "_b", "_c", "_d"]
     $p << new_array  # => ["_a", "_b", "_c", "_d"]
+    $p.new_line
 
     # >>>
 
@@ -91,7 +103,7 @@ end
 
 def add_remove_items
 
-    puts "----- Add and Remove Items ---------------"
+    puts "----- Add and Remove Items ---------------", ""
 
     # `push` and `pop`
     array = [ "0", "1", "2", "3" ]
@@ -102,12 +114,14 @@ def add_remove_items
     $p << array.pop(1)          # => ["6"]  (removed)
     $p << array.pop(2)          # => ["4", "5"] (removed)
     $p << array                 # => ["0", "1", "2", "3"]
+    $p.new_line
 
     # `unshift` and `shift`
     array = [ "0", "1", "2", "3" ]
     $p << array.unshift("-1")   # => ["-1", "0", "1", "2", "3"]
     $p << array.shift           # => "-1"  (removed)
     $p << array                 # => ["0", "1", "2", "3"]
+    $p.new_line
 
     # `insert`, `delete_at` and `delete`
     array = [ "0", "1", "1", "2" ]
@@ -118,6 +132,7 @@ def add_remove_items
     $p << array.delete("-1")                    # => nil  (not found)
     $p << array.delete("1")                     # => "1"  (removed)
     $p << array                                 # => ["0", "0.2", "0.3", "1.1", "2"]
+    $p.new_line
 
 end
 
