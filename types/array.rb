@@ -106,13 +106,13 @@ def select_items
     # <<< `select` and `select!`
 
     array = [ 0, 1, 2, 3, 4 ]
-    $p << array.select { |i| i % 2 == 0 }
-    $p << array
+    $p << array.select { |i| i % 2 == 0 }   # => [0, 2, 4]
+    $p << array                             # => [0, 1, 2, 3, 4]
     $p.new_line
 
     array = [ 0, 1, 2, 3, 4 ]
-    $p << array.select! { |i| i % 2 == 0 }
-    $p << array
+    $p << array.select! { |i| i % 2 == 0 }  # => [0, 2, 4]
+    $p << array                             # => [0, 2, 4]
     $p.new_line
 
     # >>>
