@@ -30,21 +30,21 @@ def get_set_items
 
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
     
-    $p << array[1]      #=> 1
-    $p << array[9]      #=> nil
-    $p << array[-1]     #=> 6
-    $p << array[-9]     #=> nil
+    $p << array[1]              #=> 1
+    $p << array[9]              #=> nil
+    $p << array[-1]             #=> 6
+    $p << array[-9]             #=> nil
     $p.new_line
 
     # [start, length]
-    $p << array[2, 4]   #=> [2, 3, 4, 5]
+    $p << array[2, 4]           #=> [2, 3, 4, 5]
     $p.new_line
 
     # [start..end]
-    $p << array[2..4]   #=> [2, 3, 4]
-    $p << array[2..-1]  #=> [2, 3, 4, 5, 6]
-    $p << array[2..-6]  #=> []
-    $p << array[-4..-2] #=> [3, 4, 5]
+    $p << array[2..4]           #=> [2, 3, 4]
+    $p << array[2..-1]          #=> [2, 3, 4, 5, 6]
+    $p << array[2..-6]          #=> []
+    $p << array[-4..-2]         #=> [3, 4, 5]
     $p.new_line
 
     puts "----- Set Items ---------------", ""
@@ -52,7 +52,7 @@ def get_set_items
     array = [ 0, 1, 2, 3, 4 ]
     array[1] = "1"
     array[7] = "7"
-    $p << array         #=> [0, "1", 2, 3, 4, nil, nil, "7"]
+    $p << array                 #=> [0, "1", 2, 3, 4, nil, nil, "7"]
     $p.new_line
 
 end

@@ -46,21 +46,21 @@ def get_set_keys_values
 
     hash = { "k0" => "v0", "k1" => "v1", :k2 => "v2" }
     
-    $p << hash["k0"]    #=> "v0"
-    $p << hash["k1"]    #=> "v1"
-    $p << hash["k2"]    #=> nil
-    $p << hash[:k2]     #=> "v2"
+    $p << hash["k0"]            #=> "v0"
+    $p << hash["k1"]            #=> "v1"
+    $p << hash["k2"]            #=> nil
+    $p << hash[:k2]             #=> "v2"
     $p.new_line
 
     puts "----- Set Keys and Values ---------------", ""
 
     hash = { "k0" => "v0", :k0 => "v0" }
-    hash["k0"] = "_v0"  # Update value
-    hash[:k0] = "_v0"   # Update value
-    hash["k1"] = "_v1"  # Add key and value
+    hash["k0"] = "_v0"          # Update value
+    hash[:k0] = "_v0"           # Update value
+    hash["k1"] = "_v1"          # Add key and value
     hash[2] = 2
     hash[nil] = nil
-    $p << hash          #=> {"k0"=>"_v0", :k0=>"_v0", "k1"=>"_v1", 2=>2, nil=>nil}
+    $p << hash                  #=> {"k0"=>"_v0", :k0=>"_v0", "k1"=>"_v1", 2=>2, nil=>nil}
     $p.new_line
 
 end
@@ -71,12 +71,12 @@ def obtain_information
 
     hash = { "k0" => "v0", "k1" => "v1" }
 
-    $p << hash.length      #=> 2
-    $p << hash.count       #=> 2
-    $p << hash.size        #=> 2
+    $p << hash.length           #=> 2
+    $p << hash.count            #=> 2
+    $p << hash.size             #=> 2
     $p.new_line
 
-    $p << hash.empty?      #=> false
+    $p << hash.empty?           #=> false
     $p.new_line
     
 end
