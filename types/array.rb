@@ -134,20 +134,20 @@ def add_remove_items
 
     # `push` and `pop`
     array = [ "0", "1", "2", "3" ]
-    $p << array.push("4")       #=> ["0", "1", "2", "3", "4"]
-    $p << array.push("5", "6")  #=> ["0", "1", "2", "3", "4", "5", "6"]
-    $p << ( array << "7" )      #=> ["0", "1", "2", "3", "4", "5", "6", "7"]
-    $p << array.pop             #=> "7"  (removed)
-    $p << array.pop(1)          #=> ["6"]  (removed)
-    $p << array.pop(2)          #=> ["4", "5"] (removed)
-    $p << array                 #=> ["0", "1", "2", "3"]
+    $p << array.push("4")                       #=> ["0", "1", "2", "3", "4"]
+    $p << array.push("5", "6")                  #=> ["0", "1", "2", "3", "4", "5", "6"]
+    $p << ( array << "7" )                      #=> ["0", "1", "2", "3", "4", "5", "6", "7"]
+    $p << array.pop                             #=> "7"  (removed)
+    $p << array.pop(1)                          #=> ["6"]  (removed)
+    $p << array.pop(2)                          #=> ["4", "5"] (removed)
+    $p << array                                 #=> ["0", "1", "2", "3"]
     $p.new_line
 
     # `unshift` and `shift`
     array = [ "0", "1", "2", "3" ]
-    $p << array.unshift("-1")   #=> ["-1", "0", "1", "2", "3"]
-    $p << array.shift           #=> "-1"  (removed)
-    $p << array                 #=> ["0", "1", "2", "3"]
+    $p << array.unshift("-1")                   #=> ["-1", "0", "1", "2", "3"]
+    $p << array.shift                           #=> "-1"  (removed)
+    $p << array                                 #=> ["0", "1", "2", "3"]
     $p.new_line
 
     # `insert`, `delete_at` and `delete`
