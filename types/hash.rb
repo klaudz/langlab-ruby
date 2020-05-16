@@ -29,7 +29,7 @@ def create_hashes
     $p << hash["key"]                           #=> "default"
     $p.new_line
 
-    hash = { }
+    hash = {}
     $p << hash                                  #=> {}
     $p << hash["key"]                           #=> nil
     hash.default = default_value
@@ -44,7 +44,7 @@ def obtain_information
 
     puts "----- Obtain Information ---------------", ""
 
-    hash = { "k0": "v0", "k1": "v1" }
+    hash = { "k0" => "v0", "k1" => "v1" }
 
     $p << hash.length      #=> 2
     $p << hash.count       #=> 2
@@ -56,5 +56,25 @@ def obtain_information
     
 end
 
+def iterate_hashes
+
+    puts "----- Iterate Hashes ---------------", ""
+
+    # `each`
+    hash = { "k0" => "v0", "k1" => "v1" }
+    hash_e = {}
+    $p << hash.each { |key, value|
+        key_e = "_" + key
+        value_e = "_" + value
+        hash_e[key_e] = value_e
+    }                               #=> {"k0"=>"v0", "k1"=>"v1"}
+    $p << hash_e                    #=> {"_k0"=>"_v0", "_k1"=>"_v1"}
+    $p.new_line
+
+    # >>>
+
+end
+
 create_hashes
 obtain_information
+iterate_hashes
