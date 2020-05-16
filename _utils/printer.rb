@@ -3,7 +3,7 @@ module Langlab
     
     class Printer
         def <<(object)
-            puts object ? "#{object}" : "nil"
+            puts object.nil? ? "nil" : "#{object}"
             return object
         end
     end
