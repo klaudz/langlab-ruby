@@ -63,16 +63,16 @@ def obtain_information
 
     array = [ 0, 1, 2, 3, 4, 5, 6 ]
 
-    $p << array.length      #=> 7
-    $p << array.count       #=> 7
-    $p << array.size        #=> 7
+    $p << array.length              #=> 7
+    $p << array.count               #=> 7
+    $p << array.size                #=> 7
     $p.new_line
 
-    $p << array.empty?      #=> false
+    $p << array.empty?              #=> false
     $p.new_line
 
-    $p << array.include?(3) #=> true
-    $p << array.include?(7) #=> false
+    $p << array.include?(3)         #=> true
+    $p << array.include?(7)         #=> false
     $p.new_line
     
 end
@@ -87,9 +87,9 @@ def iterate_arrays
     array_r = []
     array.each         { |i| array_e << i ** 2 }
     array.reverse_each { |i| array_r << i ** 2 }
-    $p << array         #=> [0, 1, 2, 3]
-    $p << array_e       #=> [0, 1, 4, 9]
-    $p << array_r       #=> [9, 4, 1, 0]
+    $p << array                             #=> [0, 1, 2, 3]
+    $p << array_e                           #=> [0, 1, 4, 9]
+    $p << array_r                           #=> [9, 4, 1, 0]
     $p.new_line
 
     # <<< `map` and `map!`
