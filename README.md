@@ -1,2 +1,7 @@
 # langlab-ruby
-Klaudz's Language Lab of Ruby
+Klaudz's language lab of Ruby
+
+## Purpose
+1. Learning
+2. Testing
+3. Noting
