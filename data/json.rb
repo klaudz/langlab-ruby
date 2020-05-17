@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 require 'json'
-require_relative '_utils/printer'
+require_relative '../_utils/printer'
 
 $p = Langlab::Printer.new
 $p.new_line
