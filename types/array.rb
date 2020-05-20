@@ -5,6 +5,15 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    create_arrays
+    get_set_items
+    obtain_information
+    iterate_arrays
+    select_items
+    add_remove_items
+end
+
 def create_arrays
 
     puts "----- Create Arrays ---------------", ""
@@ -163,9 +172,4 @@ def add_remove_items
 
 end
 
-create_arrays
-get_set_items
-obtain_information
-iterate_arrays
-select_items
-add_remove_items
+_catalog_

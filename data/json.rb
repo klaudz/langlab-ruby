@@ -6,6 +6,11 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    generate_json
+    parse_json
+end
+
 def generate_json
 
     puts "----- Generate JSON ---------------", ""
@@ -46,5 +51,4 @@ def parse_json
 
 end
 
-generate_json
-parse_json
+_catalog_

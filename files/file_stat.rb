@@ -5,6 +5,10 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    determine_access
+end
+
 def determine_access
 
     puts "----- Determine Access ---------------", ""
@@ -30,4 +34,4 @@ def determine_access
 
 end
 
-determine_access
+_catalog_

@@ -5,6 +5,13 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    create_hashes
+    get_set_keys_values
+    obtain_information
+    iterate_hashes
+end
+
 def create_hashes
 
     puts "----- Create Hashes ---------------", ""
@@ -100,7 +107,4 @@ def iterate_hashes
 
 end
 
-create_hashes
-get_set_keys_values
-obtain_information
-iterate_hashes
+_catalog_

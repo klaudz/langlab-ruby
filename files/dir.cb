@@ -5,6 +5,10 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    match_files
+end
+
 def match_files
 
     puts "----- Match Files ---------------", ""
@@ -17,4 +21,4 @@ def match_files
 
 end
 
-match_files
+_catalog_

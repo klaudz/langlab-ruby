@@ -2,6 +2,12 @@
 
 puts ""
 
+def _catalog_
+    test_class
+    test_parent_instance
+    test_child_instance
+end
+
 class Parent
 
     ### Initialize
@@ -117,6 +123,4 @@ def test_child_instance
 
 end
 
-test_class
-test_parent_instance
-test_child_instance
+_catalog_

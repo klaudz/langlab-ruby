@@ -5,6 +5,10 @@ require_relative '../_utils/printer'
 $p = Langlab::Printer.new
 $p.new_line
 
+def _catalog_
+    work_with_absolute_paths
+end
+
 def work_with_absolute_paths
 
     puts "----- Work with Absolute Paths ---------------", ""
@@ -31,4 +35,4 @@ def work_with_absolute_paths
 
 end
 
-work_with_absolute_paths
+_catalog_
